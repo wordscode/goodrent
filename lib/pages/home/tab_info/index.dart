@@ -1,4 +1,5 @@
 import 'package:demo1/pages/home/info/index.dart';
+import 'package:demo1/widgets/search_bar/index.dart';
 import 'package:flutter/material.dart';
 
 class TabInfo extends StatefulWidget {
@@ -14,15 +15,15 @@ class _TabInfoState extends State<TabInfo> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Center(
-          child: Text('咨询tab'),
+        backgroundColor: Colors.white,
+        title: SearchBar(
+          // showLoaction: true,
+          // showMap: true,
+          onSearch: () {
+            // Navigator.of(context).pushNamed('search')
+            // CommonToast.showToast('该功能暂未实现，敬请期待！');
+          },
         ),
-        // title: SearchBar(
-        //   onSearch: () {
-        //     CommonToast.showToast('该功能暂未实现，敬请期待！');
-        //   },
-        // ),
-        // backgroundColor: Colors.white,
       ),
       body: ListView(
         children: <Widget>[

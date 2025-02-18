@@ -1,5 +1,7 @@
 import 'package:demo1/pages/home/tab_index/index.dart';
+import 'package:demo1/pages/home/tab_profile/index.dart';
 import 'package:demo1/pages/home/tab_search/index.dart';
+import 'package:demo1/widgets/search_bar/index.dart';
 import 'package:flutter/material.dart';
 import 'package:demo1/pages/home/tab_info/index.dart';
 import 'package:demo1/widgets/page_content.dart';
@@ -11,7 +13,7 @@ List tabViewList = [
   // PageContent(name: '搜索'),
   // PageContent(name: '咨询'),
   TabInfo(),
-  PageContent(name: '我的')
+  TabProfile()
 ];
 
 //4 个BottomNavigationBarltem

@@ -1,5 +1,6 @@
 import 'package:demo1/pages/home/tab_search/data_list.dart';
 import 'package:demo1/widgets/room_list_item_widget.dart';
+import 'package:demo1/widgets/search_bar/index.dart';
 import 'package:flutter/material.dart';
 
 class TabSearch extends StatelessWidget {
@@ -9,7 +10,16 @@ class TabSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('tabSearch'),
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        title: SearchBar(
+          showLoaction: true,
+          showMap: true,
+          onSearch: () {
+            // Navigator.of(context).pushNamed('search')
+            // CommonToast.showToast('该功能暂未实现，敬请期待！');
+          },
+        ),
       ),
       body: Column(
         children: <Widget>[

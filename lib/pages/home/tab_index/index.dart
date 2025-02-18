@@ -1,6 +1,7 @@
 import 'package:demo1/pages/home/info/index.dart';
 import 'package:demo1/pages/home/tab_index/index_navigator_item.dart';
 import 'package:demo1/widgets/common_swiper.dart';
+import 'package:demo1/widgets/search_bar/index.dart';
 import 'package:flutter/material.dart';
 
 import 'package:demo1/widgets/page_content.dart';
@@ -13,8 +14,15 @@ class TabIndex extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text('tabIndex'),
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        title: SearchBar(
+          showLoaction: true,
+          showMap: true,
+          onSearch: () {
+            // Navigator.of(context).pushNamed('search');
+            // CommonToast.showToast('该功能暂未实现，敬请期待！');
+          },
         ),
       ),
       body: ListView(

@@ -1,4 +1,5 @@
 import 'package:demo1/pages/register.dart';
+import 'package:demo1/pages/setting.dart';
 import 'package:demo1/pages/test.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class Routes {
   static String roomDetail = '/room/roomId';
   static String register = '/register';
   static String test = '/test';
-
+  static String setting = '/setting';
 // 定义路由处理函数
   static Handler _homeHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -49,6 +50,11 @@ class Routes {
     return TestPage();
   });
 
+  static Handler _settingHandler =
+      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return SettingPage();
+  });
+
 //3编写函数configureRoutes关联路由名称和处理函数
   static void configureRoutes(Router router) {
     router.define(home, handler: _homeHandler);
@@ -56,6 +62,7 @@ class Routes {
     router.define(roomDetail, handler: _roomDetailHandler);
     router.define(register, handler: _registerHandler);
     router.define(test, handler: _testHandler);
+    router.define(setting, handler: _settingHandler);
     router.notFoundHandler = _notFoundHandler;
   }
 }
