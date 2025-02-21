@@ -1,4 +1,6 @@
 import 'package:demo1/pages/register.dart';
+import 'package:demo1/pages/room_add/index.dart';
+import 'package:demo1/pages/room_manage/index.dart';
 import 'package:demo1/pages/setting.dart';
 import 'package:demo1/pages/test.dart';
 import 'package:fluro/fluro.dart';
@@ -13,10 +15,14 @@ class Routes {
   // 定义路由名称
   static String home = '/';
   static String login = '/login';
-  static String roomDetail = '/room/roomId';
+  // static String roomDetail = '/room/roomId';
+  static String roomDetail = '/roomDetail/:roomId';
   static String register = '/register';
   static String test = '/test';
   static String setting = '/setting';
+  static String roomManage = '/roomManage';
+  static String roomAdd = '/roomAdd';
+
 // 定义路由处理函数
   static Handler _homeHandler = Handler(
       handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -55,6 +61,16 @@ class Routes {
     return SettingPage();
   });
 
+  static Handler _roomManageHandler =
+      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return RoomManagePage();
+  });
+
+  static Handler _roomAddHandler =
+      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return RoomAddPage();
+  });
+
 //3编写函数configureRoutes关联路由名称和处理函数
   static void configureRoutes(Router router) {
     router.define(home, handler: _homeHandler);
@@ -63,6 +79,8 @@ class Routes {
     router.define(register, handler: _registerHandler);
     router.define(test, handler: _testHandler);
     router.define(setting, handler: _settingHandler);
+    router.define(roomManage, handler: _roomManageHandler);
+    router.define(roomAdd, handler: _roomAddHandler);
     router.notFoundHandler = _notFoundHandler;
   }
 }

@@ -30,6 +30,11 @@ dependencies:
   dio: ^2.1.6
   http: ^0.12.0 # flutter_advanced_networkimage需要>0.12
   logger: ^0.9.0
+  shared_preferences: ^0.5.4+3
+  # scoped_model: ^1.0.1
+  json_annotation: ^3.0.0
+  image_picker: ^0.6.1+4
+  share: ^0.6.3+1
 
 dev_dependencies:
   flutter_test:
@@ -44,6 +49,11 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  fonts:
+    - family: CommonIcon
+      fonts:
+        - asset: static/fonts/iconfont.ttf
 
   # To add assets to your application, add an assets section, like this:
   assets:

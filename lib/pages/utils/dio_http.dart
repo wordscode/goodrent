@@ -67,8 +67,8 @@ class DioHttp {
   Future<Response<Map<String, dynamic>>> post(String path,
       [Map<String, dynamic> params, String token]) async {
     var options = Options(headers: {'Authorization': token});
-    // return await _client.post(path, data: params, options: options);
-    return await _client.post(path, data: params);
+    return await _client.post(path, data: params, options: options);
+    // return await _client.post(path, data: params);
   }
 
   Future<Response<Map<String, dynamic>>> postFormData(String path,
