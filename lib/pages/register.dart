@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:demo1/pages/utils/common_toast.dart';
-import 'package:demo1/pages/utils/dio_http.dart';
-import 'package:demo1/pages/utils/string_is_null_or_empty.dart';
+import 'package:demo1/utils/common_toast.dart';
+import 'package:demo1/utils/dio_http.dart';
+import 'package:demo1/utils/string_is_null_or_empty.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 

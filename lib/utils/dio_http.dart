@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-import '../../routes.dart';
+import '../routes.dart';
 import '../config.dart';
 import 'common_toast.dart';
 

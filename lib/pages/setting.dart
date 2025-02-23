@@ -1,4 +1,4 @@
-import 'package:demo1/pages/utils/common_toast.dart';
+import 'package:demo1/utils/common_toast.dart';
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatelessWidget {

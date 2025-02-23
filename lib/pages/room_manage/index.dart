@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:demo1/pages/home/tab_search/data_list.dart';
-import 'package:demo1/pages/utils/dio_http.dart';
+import 'package:demo1/utils/dio_http.dart';
 import 'package:demo1/widgets/common_floating_action_button.dart';
 import 'package:demo1/widgets/room_list_item_widget.dart';
 import 'package:flutter/material.dart';

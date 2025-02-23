@@ -1,7 +1,7 @@
 // import 'package:demo1/models/room_detail_data.dart';
 import 'package:demo1/pages/home/info/index.dart';
-import 'package:demo1/pages/utils/common_toast.dart';
-import 'package:demo1/pages/utils/dio_http.dart';
+import 'package:demo1/utils/common_toast.dart';
+import 'package:demo1/utils/dio_http.dart';
 import 'package:demo1/widgets/common_swiper.dart';
 import 'package:demo1/widgets/common_tag.dart';
 import 'package:demo1/widgets/common_title.dart';
